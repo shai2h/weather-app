@@ -7,22 +7,21 @@ from datetime import datetime, timedelta, timezone
 
 moscow_tz = timezone(timedelta(hours=3))
 
-with open('data.json', 'r') as file:
-    data = json.load(file)
+def start():
+    with open('data.json', 'r') as file:
+        data = json.load(file)
 
-print(data)
+    context = {
+        'date_time_now': datetime.now(moscow_tz).strftime("%d.%m.%Y %H:%M"),
+        'city': data['name'],
+        'description': data['weather'][0]['description'],
+    }
 
-context = {
-    'date_time_now': datetime.now(moscow_tz).strftime("%d.%m.%Y %H:%M"),
-    'city': data['name'],
-    'description': data['weather'][0]['description'],
-}
-
-print(
-    f"Город: {context['city']}\n"
-    f"Дата/Время: {context['date_time_now']}\n"
-    f"Погода: {context['description']}"
-)
+    print(
+        f"Город: {context['city']}\n"
+        f"Дата/Время: {context['date_time_now']}\n"
+        f"Погода: {context['description']}"
+    )
 
 # пример №1 tg
 """
