@@ -7,8 +7,8 @@ from utils.get_token import get_token_from_env_variable
 TOKEN = get_token_from_env_variable()
 
 
-def get_response_from_api():
-    link = f'https://api.openweathermap.org/data/2.5/weather?lat=55.8664&lon=48.3594&appid={TOKEN}'
+def get_response_from_api_to_json():
+    link = f'https://api.openweathermap.org/data/2.5/weather?q=Volzhsk&appid={TOKEN}&lang=ru'
     response = requests.get(link)
     data = response.json()
 
