@@ -7,7 +7,7 @@
         {
             "id": 804,
             "main": "Clouds",
-            "description": "overcast clouds",
+            "description": "пасмурно",
             "icon": "04n"
         }
     ],
@@ -31,7 +31,7 @@
     "clouds": {
         "all": 90
     },
-    "dt": 1758917124,
+    "dt": 1758917797,
     "sys": {
         "country": "RU",
         "sunrise": 1758854364,
@@ -39,6 +39,6 @@
     },
     "timezone": 10800,
     "id": 472234,
-    "name": "Volzhsk",
+    "name": "Волжск",
     "cod": 200
 }
